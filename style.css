@@ -5,6 +5,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
+    background-color: 	#DCDCDC;
+    background-image: url("aset gambar/2204.jpg");
+    background-repeat: no-repeat; 
 }  
 .main{
     border: 5px solid black;
@@ -12,18 +17,28 @@
     width: 750px;
     position: relative;
     margin: auto;
-    top: 50px;
+    top: 20px;
     background-color: grey;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; 
 }
-
 .main img{
     position: absolute;
     width: 30%;
     bottom: -100px;
     left: -120px;
-    z-index: 0;
+    z-index: 3;
+}
+.clear-input{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.clear-input i:hover{
+    transform: rotate(45deg);
+    color: white;
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
 .line-break{
     border-top: 5px solid black;
@@ -32,16 +47,30 @@
     z-index: 1;
     background-color: white;
 }
-h1{
-    position: relative;
-
+#time{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5px;
 }
-
- h1, .input-container{
+.header-time{
+    justify-content: space-between !important;
+    display: flex;
+    margin: 10px 10px;
+}
+.input-container{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 50px 0;
+}
+form select{
+    position: relative;
+    top: -119px;
+    left: 210px;
+    cursor: pointer;
+    background-color: white!important;
+    color: black;
+    border: 2px solid black!important;
 }
 form input{
     width: 600px;
@@ -71,23 +100,40 @@ button:hover{
     justify-content: center;
     align-items: center;
 }
-
 .todo-list{
     min-width: 30%;
-    width: 600px;
+    margin-top: 20px;
+    width: 650px;
     list-style: none;
     align-self: center !important;
-    z-index: 2;
+    z-index: 0;
+    height: 350px;
+    overflow-y: auto;
+    background-color: black;   
 }
-
+.todo-list::-webkit-scrollbar {
+    width: 10px;
+  }
+.todo-list::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  /* Handle */
+.todo-list::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  /* Handle on hover */
+.todo-list::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 .todo{
-    background-color: white;
-    color:black;
+    background-color: transparent;
+    color: white;
     margin: 1rem;
     font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 1rem;
 }
 .todo::before{
     content: "$";
@@ -112,13 +158,22 @@ button:hover{
 .completed{
     text-decoration: line-through;
     transition: all 0.3s ease;
+    opacity: 0.8;
     z-index: -1;
     background-color: transparent;
 }
-.slip{
-    transform: rotate(120deg);
-    opacity: 0;
+footer{
+  position: relative;
+  color: red;
+  font-weight: 600;
+  top: -5px;
+  z-index: 4;
+  text-align: center;
 }
+
+
+
+
 
 @media(max-width: 1200px){
     .main{
@@ -127,7 +182,13 @@ button:hover{
     width: auto;
     border-bottom-right-radius: 0.5rem;
     }
+    
     h1{
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    #time{
+        font-size: 18px;
         margin-top: 10px;
     }
     
@@ -137,12 +198,22 @@ button:hover{
         z-index: 0;
         opacity: 1;
     }
+    .input-container{
+        margin-top: 15px;
+    }
     form input{
         margin: 0 10px;
     }
     form button{
         margin-right: 10px;
-        
+    }
+    form select{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    form input, form button, form select{
+        padding: 5px;
     }
     .todo{
        background-color: transparent;
@@ -152,17 +223,36 @@ button:hover{
        flex-wrap: wrap;
     }
     .todo-list{
-        max-height: 350px;
-        height: auto;
+        height: 350px;
         overflow-y: auto;
-        z-index: 1;
+        z-index: 0;
         padding: auto;
         margin-right: 10px;
+        background-color: transparent !important;
+        color: #181818 !important;
+    }
+    .todo{
+        color:#181818 !important;
     }
     .todo-list::-webkit-scrollbar {
         display: none;
     }
+    .todo-item{
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .todo-item::after{
+        content: '';
+        position: absolute;
+        width: 50%;
+        background-color: white;
+    }
     .check-btn, .remove-btn{
         padding: 5px;
+    }
+    footer{
+        font-size: 13px;
+        text-align: right;
+        right: 30px;;
     }
 }
