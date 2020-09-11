@@ -9,8 +9,7 @@
 body{
     background-color: 	#DCDCDC;
     background-image: url("aset gambar/2204.jpg");
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat;  
 }  
 .main{
     border: 5px solid black;
@@ -101,7 +100,6 @@ button:hover{
     justify-content: center;
     align-items: center;
 }
-
 .todo-list{
     min-width: 30%;
     margin-top: 20px;
@@ -112,27 +110,21 @@ button:hover{
     height: 350px;
     overflow-y: auto;
     background-color: black;
-    
 }
 .todo-list::-webkit-scrollbar {
     width: 10px;
   }
-  
-
 .todo-list::-webkit-scrollbar-track {
     background: #f1f1f1; 
   }
-   
   /* Handle */
 .todo-list::-webkit-scrollbar-thumb {
     background: #888; 
   }
-  
   /* Handle on hover */
 .todo-list::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
-
 .todo{
     background-color: transparent;
     color: white;
@@ -157,7 +149,6 @@ button:hover{
     border-radius: 0;
     padding: 1rem;
 }
-
 .todo-item{
     padding: 0 0.5rem;
 }
@@ -179,16 +170,6 @@ footer{
   z-index: 4;
   text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
