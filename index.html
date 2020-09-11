@@ -3,45 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="kompi.png" type="image/icon">
-    <title>TO DO LIST</title>
+    <link rel="icon" href="aset gambar/kompi.png" type="image/icon">
+    <title>To do list</title>
     <!-- STYLE CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="main">
-        <svg height="60" width="80">
-            <circle cx="50" cy="35" r="20" stroke="black" stroke-width="0" fill="red" />
-        </svg>
-        <svg height="60" width="50">
-            <circle cx="20" cy="35" r="20" stroke="black" stroke-width="0" fill="yellow" />
-        </svg>
-        <svg height="60" width="100">
-            <circle cx="20" cy="35" r="20" stroke="black" stroke-width="0" fill="green" />
-        </svg>
-        <img src="kompi.png" alt="orang main komputer">
+        <div class="top-icon">
+            <svg height="60" width="80">
+                <circle cx="50" cy="35" r="20" stroke="black" stroke-width="0" fill="red" />
+            </svg>
+            <svg height="60" width="50">
+                <circle cx="20" cy="35" r="20" stroke="black" stroke-width="0" fill="yellow" />
+            </svg>
+            <svg height="60" width="100">
+                <circle cx="20" cy="35" r="20" stroke="black" stroke-width="0" fill="green" />
+            </svg>
+            <span class="clear-input"> 
+                <i class="fa fa-refresh fa-3x"></i>
+            </span>
+        </div>    
+            <img src="aset gambar/kompi.png" alt="orang main komputer">
         <div class="line-break">
-        <h1> TO DO LIST</h1>
-            <form>
-                <div class="select">
-                    <select name="todos" class="filter-todo">
-                        <option value="all">All</option>
-                        <option value="completed">Completed</option>
-                        <option value="uncompleted">Uncompleted</option>
-                    </select>
-                </div>
-                <div class="input-container">
-                    <input type="text" class="input-text" maxlength="15" placeholder="$/YourList/...(for responsive sake, max character is 15)">
-                    <button type="submit" class="input-btn"><i class="fa fa-plus"></i></button>
-                </div>
-            </form>
-            <div class="todo-container">
-                <ul class="todo-list"></ul>
-            </div> 
+                <div class="header-time">
+                    <h1> TO DO LIST</h1>
+                        <div id="time"></div>
+                    </div>
+                <form>
+                    <div class="select">
+                        <select name="todos" class="filter-todo">
+                            <option value="all">All</option>
+                            <option value="completed">Completed</option>
+                            <option value="uncompleted">Uncompleted</option>
+                        </select>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input-text" maxlength="15" placeholder="$/YourList/...(for responsive sake, max character is 15)">
+                        <button type="submit" class="input-btn"><i class="fa fa-plus"></i></button>
+                    </div>
+                </form>
+                <div class="todo-container">
+                    <ul class="todo-list"></ul>
+                </div> 
+            </div>
         </div>
-    </div>
-  
-<script src="behave.js"></script>
+        <footer>©AgustinusYudhistira2020</footer>
+    <script src="behave.js"></script>
 </body>
 </html>
