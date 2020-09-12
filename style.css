@@ -9,7 +9,8 @@
 body{
     background-color: 	#DCDCDC;
     background-image: url("aset gambar/2204.jpg");
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat;
+    
 }  
 .main{
     border: 5px solid black;
@@ -100,6 +101,7 @@ button:hover{
     justify-content: center;
     align-items: center;
 }
+
 .todo-list{
     min-width: 30%;
     margin-top: 20px;
@@ -110,21 +112,27 @@ button:hover{
     height: 350px;
     overflow-y: auto;
     background-color: black;
+    
 }
 .todo-list::-webkit-scrollbar {
     width: 10px;
   }
+  
+
 .todo-list::-webkit-scrollbar-track {
     background: #f1f1f1; 
   }
+   
   /* Handle */
 .todo-list::-webkit-scrollbar-thumb {
     background: #888; 
   }
+  
   /* Handle on hover */
 .todo-list::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+
 .todo{
     background-color: transparent;
     color: white;
@@ -149,6 +157,7 @@ button:hover{
     border-radius: 0;
     padding: 1rem;
 }
+
 .todo-item{
     padding: 0 0.5rem;
 }
@@ -173,7 +182,12 @@ footer{
 
 
 
-@media(max-width: 1200px){
+
+
+
+
+
+@media(max-width: 770px){
     .main{
     margin-left: 20px;
     margin-right: 20px;
@@ -215,10 +229,13 @@ footer{
     }
     .todo{
        background-color: transparent;
-       font-weight: 500px;
        font-size: 20px;
        display: flex;
        flex-wrap: wrap;
+       border-bottom: 1px solid darkgray;
+       border-width: 1px;
+       padding-bottom: 7px;
+       font-weight: bold!important;
     }
     .todo-list{
         height: 350px;
@@ -239,12 +256,6 @@ footer{
         font-size: 15px;
         font-weight: 700;
     }
-    .todo-item::after{
-        content: '';
-        position: absolute;
-        width: 50%;
-        background-color: white;
-    }
     .check-btn, .remove-btn{
         padding: 5px;
     }
@@ -252,5 +263,28 @@ footer{
         font-size: 13px;
         text-align: right;
         right: 30px;;
+    }
+}
+
+@media(max-width: 1000px){
+    .main{
+        margin: 0 20px;
+        width: auto;
+    }
+    .input-container{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .todo-list{
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px; 
+    }
+    .select{
+        position: relative;
+    }
+    .main img{
+        width: 160px;
+        left: -20px;
     }
 }
